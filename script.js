@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== COUNTDOWN WITH LOCK =====
 function initCountdown() {
-    const targetDate = new Date('2026-02-14T13:56:00').getTime();
+    const targetDate = new Date('2026-02-21T00:00:00').getTime();
     const unlockBtn = document.getElementById('unlockBtn');
 
     function updateCountdown() {

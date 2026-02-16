@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🎂 A Magical Surprise For You | Rabbia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <!-- DYNAMIC BACKGROUND -->
+    <div class="background">
+        <div class="aurora"></div>
+        <div class="stars"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <div class="glow-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+        </div>
+    </div>
+
+    <!-- FLOATING PARTICLES -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- ANIMATED HEADING -->
+            <div class="heading-section">
+                <h1 class="main-heading">
+                    <span class="word">🎉</span>
+                    <span class="word">A</span>
+                    <span class="word">MAGICAL</span>
+                    <span class="word">SURPRISE</span>
+                    <span class="word">🎉</span>
+                </h1>
+            </div>
+
+            <!-- SUBHEADING -->
+            <p class="subheading">
+                <span class="text-wrapper">
+                    <span class="text">For Someone Extra Special</span>
+                </span>
+            </p>
+
+            <!-- ANIMATED COUNTDOWN BOX -->
+            <div class="countdown-wrapper">
+                <div class="countdown-box">
+                    <h2 class="countdown-title">
+                        <span class="glitch" data-text="⏳ COUNTDOWN BEGINS ⏳">⏳ COUNTDOWN BEGINS ⏳</span>
+                    </h2>
+                    
+                    <p class="countdown-subtitle">Your Birthday Surprise Unlocks In</p>
+
+                    <!-- COUNTDOWN DISPLAY -->
+                    <div class="countdown-timer">
+                        <div class="timer-unit">
+                            <div class="timer-value" id="days">000</div>
+                            <div class="timer-label">DAYS</div>
+                        </div>
+                        <div class="timer-separator">
+                            <span class="dot">●</span>
+                            <span class="dot">●</span>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="hours">00</div>
+                            <div class="timer-label">HOURS</div>
+                        </div>
+                        <div class="timer-separator">
+                            <span class="dot">●</span>
+                            <span class="dot">●</span>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="minutes">00</div>
+                            <div class="timer-label">MINUTES</div>
+                        </div>
+                        <div class="timer-separator">
+                            <span class="dot">●</span>
+                            <span class="dot">●</span>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="seconds">00</div>
+                            <div class="timer-label">SECONDS</div>
+                        </div>
+                    </div>
+
+                    <!-- DATE DISPLAY -->
+                    <p class="date-display">📅 February 21st, 2026</p>
+                </div>
+            </div>
+
+            <!-- UNLOCK BUTTON -->
+            <div class="button-wrapper">
+                <a href="page2-letter.html" id="unlockBtn" class="unlock-btn locked-btn">
+                    <span class="btn-icon">🔐</span>
+                    <span class="btn-text">Wait for the Special Moment to Come</span>
+                    <span class="btn-glow"></span>
+                </a>
+                <p class="button-hint">✨ The countdown determines your destiny ✨</p>
+            </div>
+
+            <!-- INFO CARDS -->
+            <div class="info-cards">
+                <div class="info-card card-1">
+                    <div class="card-icon">💝</div>
+                    <p>Letter & Memories</p>
+                </div>
+                <div class="info-card card-2">
+                    <div class="card-icon">📸</div>
+                    <p>Beautiful Moments</p>
+                </div>
+                <div class="info-card card-3">
+                    <div class="card-icon">💌</div>
+                    <p>Questions</p>
+                </div>
+                <div class="info-card card-4">
+                    <div class="card-icon">🎂</div>
+                    <p>Special Birthday</p>
+                </div>
+            </div>
+
+            <!-- MOTIVATIONAL TEXT -->
+            <div class="motivation-text">
+                <p class="main-text">Every second brings us closer to celebrating YOU</p>
+                <p class="sub-text">This isn't just a countdown... it's the beginning of something magical ✨</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FLOATING ELEMENTS -->
+    <div class="floating-elements">
+        <div class="floating-emoji emoji-1">💕</div>
+        <div class="floating-emoji emoji-2">✨</div>
+        <div class="floating-emoji emoji-3">🌟</div>
+        <div class="floating-emoji emoji-4">💫</div>
+        <div class="floating-emoji emoji-5">🎀</div>
+        <div class="floating-emoji emoji-6">🎁</div>
+    </div>
+
+    <!-- SCROLL INDICATOR -->
+    <div class="scroll-indicator">
+        <div class="scroll-arrow">↓</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

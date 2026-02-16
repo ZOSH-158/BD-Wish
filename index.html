@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your SPA</title>
+    <title>Single Page Application</title>
     <style>
-        section { display: none; }
-        section.active { display: block; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .nav { background: #333; color: white; padding: 15px; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .container { padding: 20px; }
     </style>
 </head>
 <body>
-    <nav>
-        <button onclick="showSection('countdown')">Countdown</button>
-        <button onclick="showSection('letter')">Letter</button>
-        <button onclick="showSection('memories')">Memories</button>
-        <button onclick="showSection('whyyouspecial')">Why You Special</button>
-        <button onclick="showSection('timeline')">Timeline</button>
-        <button onclick="showSection('questions')">Questions</button>
-        <button onclick="showSection('finale')">Finale</button>
-    </nav>
-
-    <section id="countdown" class="active">
-        <!-- Content from index.html (countdown page) -->
-    </section>
-    
-    <section id="letter">
-        <!-- Content from page2-letter.html -->
-    </section>
-    
-    <section id="memories">
-        <!-- Content from page3-memories.html -->
-    </section>
-    
-    <section id="whyyouspecial">
-        <!-- Content from page4-whyyouspecial.html -->
-    </section>
-    
-    <section id="timeline">
-        <!-- Content from page5-timeline.html -->
-    </section>
-    
-    <section id="questions">
-        <!-- Content from page6-questions.html -->
-    </section>
-    
-    <section id="finale">
-        <!-- Content from page7-finale.html -->
-    </section>
-
+    <div class="nav">
+        <a href="#countdown">Countdown</a>
+        <a href="#letter">Letter</a>
+        <a href="#memories">Memories</a>
+        <a href="#whyyouspecial">Why You're Special</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#questions">Questions</a>
+        <a href="#finale">Finale</a>
+    </div>
+    <div class="container">
+        <div id="countdown">
+            <h1>Countdown Page</h1>
+            <p>This is the countdown page content.</p>
+        </div>
+        <div id="letter">
+            <h1>Letter Page</h1>
+            <p>This is the letter page content.</p>
+        </div>
+        <div id="memories">
+            <h1>Memories Page</h1>
+            <p>This is the memories page content.</p>
+        </div>
+        <div id="whyyouspecial">
+            <h1>Why You're Special Page</h1>
+            <p>This is the why you're special page content.</p>
+        </div>
+        <div id="timeline">
+            <h1>Timeline Page</h1>
+            <p>This is the timeline page content.</p>
+        </div>
+        <div id="questions">
+            <h1>Questions Page</h1>
+            <p>This is the questions page content.</p>
+        </div>
+        <div id="finale">
+            <h1>Finale Page</h1>
+            <p>This is the finale page content.</p>
+        </div>
+    </div>
     <script>
-        function showSection(id) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
             });
-            document.getElementById(id).classList.add('active');
-        }
+        });
     </script>
 </body>
 </html>

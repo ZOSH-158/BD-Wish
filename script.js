@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== COUNTDOWN WITH LOCK =====
 function initCountdown() {
     const targetDate = new Date('2026-02-21T00:00:00').getTime();
-    const unlockBtn = document.getElementById('unlockBtn');
+    //const unlockBtn = document.getElementById('unlockBtn');
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -45,8 +45,8 @@ function unlockPage() {
     const unlockBtn = document.getElementById('unlockBtn');
     if (!unlockBtn) return;
 
-    unlockBtn.classList.remove('locked-btn');
-    unlockBtn.classList.add('unlocked-btn');
+    //unlockBtn.classList.remove('locked-btn');
+    //unlockBtn.classList.add('unlocked-btn');
     unlockBtn.innerHTML = `
         <span class="btn-icon">🎉</span>
         <span class="btn-text">BEGIN YOUR JOURNEY!</span>

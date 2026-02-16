@@ -242,3 +242,37 @@ document.addEventListener('contextmenu', (e) => {
 // ===== CONSOLE MESSAGE =====
 console.log('%c🎂 HAPPY BIRTHDAY RABBIA! 🎂', 'font-size: 20px; color: #ff006e; font-weight: bold;');
 console.log('%cYour surprise is loading... ✨', 'font-size: 14px; color: #00d4ff;');
+
+// Add this at the end of your script.js
+// Handle page navigation with hash
+window.addEventListener('hashchange', handlePageNavigation);
+document.addEventListener('DOMContentLoaded', handlePageNavigation);
+
+function handlePageNavigation() {
+    const page = window.location.hash.slice(1) || 'home';
+    const pageMap = {
+        'home': 'index.html',
+        'page2-letter': 'page2-letter.html',
+        'page3-memories': 'page3-memories.html',
+        'page4-whyyouspecial': 'page4-whyyouspecial.html',
+        'page5-timeline': 'page5-timeline.html',
+        'page6-questions': 'page6-questions.html',
+        'page7-finale': 'page7-finale.html'
+    };
+    
+    // Load the appropriate page content
+    loadPageContent(pageMap[page]);
+}
+
+function loadPageContent(filename) {
+    fetch(filename)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const content = doc.querySelector('main') || doc.querySelector('body');
+            document.querySelector('main').innerHTML = content.innerHTML;
+            initAnimations(); // Reinitialize animations for new content
+        });
+}
+
